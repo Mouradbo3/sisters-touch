@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  font-family: 'Inter', system-ui, sans-serif;
+  scroll-behavior: smooth;
+  background-color: #0a0a0a;
+  --gold: #ca8a04;
+  --beige: #f5ede6;
+  --emerald: #059669;
+  --dark: #000000;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1410 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+::selection {
+  background: rgba(202, 138, 4, 0.3);
+  color: #f5ede6;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+}
+
+.glass-card {
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(202, 138, 4, 0.2);
+  backdrop-filter: blur(24px);
+}
+
+.luxury-glow {
+  box-shadow: 0 0 30px rgba(202, 138, 4, 0.15);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(245, 237, 230, 0.5);
+}
+
+/* Smooth transitions */
+@layer components {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(202, 138, 4, 0.6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(202, 138, 4, 0.8);
+}
